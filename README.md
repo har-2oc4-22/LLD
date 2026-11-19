@@ -21,6 +21,8 @@ A comprehensive repository containing Low-Level Design (LLD) principles, Design 
 
 ## 🎯 Basic Prerequisites (Must Know Before LLD)
 
+> 📖 **Deep-Dive Connected Guide**: Agar aap dekhna chahte hain ki Classes $\to$ Encapsulation $\to$ Contracts (Interfaces) $\to$ Composition $\to$ Polymorphism $\to$ Design Patterns aapas mein ek continuous story ki tarah kaise connect hote hain, toh zaroor padhein: **[The Connected Guide to LLD Basics (PREREQUISITES.md)](./PREREQUISITES.md)**.
+
 Low-Level Design (LLD) aur Machine Coding mein enter karne se pehle in 5 core building blocks ki strong understanding hona zaroori hai:
 
 ### 1. 💻 Language & OOP Fundamentals (Java or C++)
