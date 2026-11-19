@@ -7,6 +7,7 @@ A comprehensive repository containing Low-Level Design (LLD) principles, Design 
 ## 📚 Table of Contents
 
 - [🎯 Basic Prerequisites (Must Know Before LLD)](#-basic-prerequisites-must-know-before-lld)
+- [🌐 High-Level Design (HLD) Companion Guide](../HLD/README.md)
 - [Core OOP Concepts](#-core-oop-concepts)
 - [SOLID Principles](#-solid-principles)
 - [Design Patterns](#-design-patterns)
