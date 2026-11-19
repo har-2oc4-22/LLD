@@ -1,0 +1,10 @@
+{
+    "java.jdt.ls.java.home": "C:\\Users\\harsh\\.jdks\\openjdk-27",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-27",
+            "path": "C:\\Users\\harsh\\.jdks\\openjdk-27",
+            "default": true
+        }
+    ]
+}
