@@ -6,6 +6,7 @@ A comprehensive repository containing Low-Level Design (LLD) principles, Design 
 
 ## 📚 Table of Contents
 
+- [🎯 Basic Prerequisites (Must Know Before LLD)](#-basic-prerequisites-must-know-before-lld)
 - [Core OOP Concepts](#-core-oop-concepts)
 - [SOLID Principles](#-solid-principles)
 - [Design Patterns](#-design-patterns)
@@ -14,8 +15,58 @@ A comprehensive repository containing Low-Level Design (LLD) principles, Design 
   - [Behavioral Patterns](#behavioral-patterns)
 - [Real-World Case Studies & Machine Coding](#-real-world-case-studies--machine-coding)
 - [Practice Problems & Hackathons](#-practice-problems--hackathons)
-- [Repository Structure](#-repository-structure)
 - [How to Run](#-how-to-run)
+
+---
+
+## 🎯 Basic Prerequisites (Must Know Before LLD)
+
+Low-Level Design (LLD) aur Machine Coding mein enter karne se pehle in 5 core building blocks ki strong understanding hona zaroori hai:
+
+### 1. 💻 Language & OOP Fundamentals (Java or C++)
+- **Classes, Objects & Lifecycle**: Memory allocation, constructors, copy constructors, destructors.
+- **Access Modifiers & Encapsulation**: Proper usage of `private` (data hiding), `protected` (inheritance), aur `public`.
+- **Abstract Classes vs Interfaces**:
+  - *Interface*: Pure contract / capabilities (`PaymentStrategy`, `Flyable`, `Observer`). Multiple interfaces implement ho sakte hain.
+  - *Abstract Class*: Partial implementation + code sharing (`Vehicle`, `Robot`, `ModelTrainer`).
+- **Enums & Constants**: Magic strings (`"PENDING"`, `"SUCCESS"`) avoid karke strongly-typed enums (`OrderStatus.PENDING`, `DeviceType.BLUETOOTH`) use karna.
+- **Generics / Templates**: Reusable type-safe structures (`Iterator<T>`, `Pair<K, V>`).
+
+### 2. 🗃️ Essential Data Structures for Machine Coding
+LLD mein database ki jagah in-memory collections use hoti hain:
+- **`Map<K, V>` / `HashMap`**: Entity lookup by ID, indexing, state tracking ($O(1)$ lookups).
+- **`List<T>` / `ArrayList`**: Maintaining ordered items, shopping carts, event history.
+- **`Deque<T>` / `Queue`**: Round-robin player turn rotation (e.g. Tic-Tac-Toe, Snake & Ladder) aur background task execution.
+- **`Stack<T>`**: Undo / Redo histories, Inorder tree iterators, rollback operations.
+- **`Set<T>`**: Tracking unique visitors, muting users, graph cycle detection.
+
+### 3. 📐 UML & Class Relationship Notations
+Class diagrams ko read aur draw karne ke liye ye 6 symbols clear hone chahiye:
+```text
+Dependency:      [Driver]  - - - - >  [Car]           (Uses-a: method parameter)
+Association:     [Doctor]  ───────  [Patient]         (Knows-a: structural peer link)
+Aggregation:     [Dept]    ◇──────  [Professor]       (Has-a: weak link, independent life)
+Composition:     [House]   ◆──────  [Room]            (Has-a: strong link, death dependency)
+Generalization:  [Dog]     ──────▷  [Animal]          (Is-a: inheritance)
+Realization:     [CreditCard] - - ▷ [PaymentStrategy] (Implements: interface)
+```
+
+### 4. 🔒 Concurrency & Thread-Safety Basics
+High-scale machine coding systems (e.g. Coupon Redemption, Singleton, Inventory) mein multi-threading concepts aate hain:
+- **Race Condition**: Jab multiple threads bina synchronization ke shared state ko simultaneously modify karte hain.
+- **`synchronized` blocks & `ReentrantLock`**: Critical sections ko protect karne ke liye locking.
+- **`volatile` keyword**: Instruction reordering rokna aur thread memory visibility ensure karna (e.g. Double-Checked Locking Singleton).
+- **Atomic Variables**: `AtomicInteger` lock-free thread-safe counters ke liye.
+
+### 5. 🧠 The LLD Mindset & Clean Code Heuristics
+- **Program to an Interface, not an Implementation**: Hamesha base interface reference hold karo (`List<Product> list = new ArrayList<>()`), concrete class se tightly couple mat bano.
+- **Favor Composition over Inheritance**: Code reuse ke liye "HAS-A" relationship "IS-A" se zyada flexible aur maintainable hoti hai.
+- **Separation of Concerns (SoC)**:
+  - `models/`: Pure state containers (Data classes).
+  - `managers/` ya `services/`: Business workflows and operations.
+  - `strategies/`: Interchangeable algorithms.
+  - `factories/`: Object creation logic.
+- **DRY (Don't Repeat Yourself)** & **YAGNI (You Aren't Gonna Need It)**: Over-engineering mat karo, wahi likho jo requirements demand karein.
 
 ---
 
